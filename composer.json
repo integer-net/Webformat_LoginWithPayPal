@@ -1,0 +1,9 @@
+{
+    "name": "webformat/loginwithpaypal",
+    "type": "magento-module",
+    "description": "This extension makes the customer login easier by adding a &#x201C;Login With PayPal&#x201D; button to customer login page and onepage checkout login tab.",
+    "homepage": "http://www.magentocommerce.com/magento-connect/webformat-login-with-paypal.html",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

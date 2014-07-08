@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * WEBFORMAT s.r.l.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Webformat
+ * @package     LoginWithPayPal
+ * @copyright   Copyright (c) 2014 WEBFORMAT s.r.l. (http://www.webformat.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Webformat_LoginWithPayPal>
+            <version>0.9.0</version>
+        </Webformat_LoginWithPayPal>
+    </modules>
+    <global>
+        <helpers>
+            <webformat_loginwithpaypal>
+                <class>Webformat_LoginWithPayPal_Helper</class>
+            </webformat_loginwithpaypal>
+        </helpers>
+        <blocks>
+            <webformat_loginwithpaypal>
+                <class>Webformat_LoginWithPayPal_Block</class>
+            </webformat_loginwithpaypal>
+        </blocks>
+        <models>
+            <webformat_loginwithpaypal>
+                <class>Webformat_LoginWithPayPal_Model</class>
+            </webformat_loginwithpaypal>
+        </models>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <webformat_loginwithpaypal>
+                    <file>webformat/loginwithpaypal.xml</file>
+                </webformat_loginwithpaypal>
+            </updates>
+        </layout>
+        <routers>
+            <webformat_loginwithpaypal>
+                <use>standard</use>
+                <args>
+                    <module>Webformat_LoginWithPayPal</module>
+                    <frontName>loginwithpaypal</frontName>
+                </args>
+            </webformat_loginwithpaypal>
+        </routers>
+        <translate>
+            <modules>
+                <webformat_loginwithpaypal>
+                    <files>
+                        <default>webformat/Webformat_LoginWithPayPal.csv</default>
+                    </files>
+                </webformat_loginwithpaypal>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <webformat_loginwithpaypal>
+                    <files>
+                        <default>webformat/Webformat_LoginWithPayPal.csv</default>
+                    </files>
+                </webformat_loginwithpaypal>
+            </modules>
+        </translate>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <webformat_backenfmotifier>
+                        <type>singleton</type>
+                        <class>webformat_loginwithpaypal/backendNotifier_observer</class>
+                        <method>checkFeed</method>
+                    </webformat_backenfmotifier>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </adminhtml>
+    <default>
+        <webformat_loginwithpaypal>
+            <settings>
+                <flg_sandbox>1</flg_sandbox>
+                <sandbox_endpoint>api.sandbox.paypal.com</sandbox_endpoint>
+                <endpoint>api.paypal.com</endpoint>
+                <scope>openid email profile address phone</scope>
+            </settings>
+            <redirect>
+                <success_login>customer/account</success_login>
+                <error_login>customer/account/login</error_login>
+                <success_checkout>checkout/onepage</success_checkout>
+                <error_checkout>checkout/onepage</error_checkout>
+            </redirect>
+            <theme>
+                <button>blue</button>
+            </theme>
+            <feed>
+                <url><![CDATA[www.webformat.com/index.php?id=559&type=105&m=loginwithpaypal]]></url>
+                <frequency>86400</frequency>
+            </feed>
+        </webformat_loginwithpaypal>
+    </default>
+</config>

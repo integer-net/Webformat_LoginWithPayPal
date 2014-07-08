@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * WEBFORMAT s.r.l.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Webformat
+ * @package     LoginWithPayPal
+ * @copyright   Copyright (c) 2014 WEBFORMAT s.r.l. (http://www.webformat.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <sections>
+        <webformat_loginwithpaypal translate="label" module="webformat_loginwithpaypal">
+            <label>Login With PayPal</label>
+            <tab>customer</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Login with PayPal configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <comment><![CDATA[<h3>Need help to configure <q>Login With PayPal</q> extension?</h3><p>If you need help to configure <q>Login With PayPal</q> extension, please visit this page: <a href="http://www.webformat.com/index.php?id=991&src=magento-config" target="_blank"><strong>Login with PayPal docs</strong></a>.</p>]]></comment>
+                    <fields>
+                        <flg_sandbox translate="label">
+                            <label>Use Sandbox account</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </flg_sandbox>
+                        <client_id translate="label">
+                            <label>Client ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <flg_sandbox>0</flg_sandbox>
+                            </depends>
+                        </client_id>
+                        <secret translate="label">
+                            <label>Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <flg_sandbox>0</flg_sandbox>
+                            </depends>
+                        </secret>
+                        <sandbox_client_id translate="label">
+                            <label>Sandbox Client ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <flg_sandbox>1</flg_sandbox>
+                            </depends>
+                        </sandbox_client_id>
+                        <sandbox_secret translate="label">
+                            <label>Sandbox Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <flg_sandbox>1</flg_sandbox>
+                            </depends>
+                        </sandbox_secret>
+                        <sandbox_endpoint translate="label">
+                            <label>Sandbox endpoint</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <flg_sandbox>1</flg_sandbox>
+                            </depends>
+                        </sandbox_endpoint>
+                        <endpoint translate="label">
+                            <label>Production endpoint</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <flg_sandbox>0</flg_sandbox>
+                            </depends>
+                        </endpoint>
+                        <scope translate="label">
+                            <label>Info request scope</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </scope>
+                    </fields>
+                </settings>
+                <theme>
+                    <label>Theme configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <button>
+                            <label>Button theme</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>webformat_loginwithpaypal/system_config_source_button_theme</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button>
+                    </fields>
+                </theme>
+                <redirect>
+                    <label>Redirect configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <success_login translate="label">
+                            <label>Success redirect page for customer login</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </success_login>
+                        <error_login translate="label">
+                            <label>Error redirect page for customer login</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </error_login>
+                        <success_checkout translate="label">
+                            <label>Success redirect page for checkout</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </success_checkout>
+                        <error_checkout translate="label">
+                            <label>Error redirect page for checkout</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </error_checkout>
+                    </fields>
+                </redirect>
+            </groups>
+        </webformat_loginwithpaypal>
+    </sections>
+</config>

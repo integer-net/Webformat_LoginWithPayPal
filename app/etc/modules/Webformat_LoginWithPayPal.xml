@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webformat_LoginWithPayPal>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Webformat_LoginWithPayPal>
+    </modules>
+</config>

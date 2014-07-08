@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+    <name>Webformat_LoginWithPayPal</name>
+    <version>0.9.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL 3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension makes the customer login easier by adding a &#x201C;Login With PayPal&#x201D; button to customer login page and onepage checkout login tab.</summary>
+    <description>This extension makes the customer login easier by adding a &#x201C;Login With PayPal&#x201D; button to customer login page and onepage checkout login tab.&#xD;
+&#xD;
+Please note that an appropiate application in PayPal developer site it's needed. You can read our help page before installing the extension:&#xD;
+http://www.webformat.com/index.php?id=989  (Italian documentation)&#xD;
+http://www.webformat.com/index.php?id=991 (English documentation)</description>
+    <notes>First stable release</notes>
+    <authors><author><name>WEBFORMAT s.r.l.</name><user>webformat</user><email>magesupport@webformat.com</email></author></authors>
+    <date>2014-06-27</date>
+    <time>08:51:24</time>
+    <contents><target name="magecommunity"><dir name="Webformat"><dir name="LoginWithPayPal"><dir name="Block"><file name="AbstractButton.php" hash="e04788ca16d2c16e4ce4fa4d327f4dee"/><dir name="Checkout"><dir name="Onepage"><dir name="Login"><file name="Button.php" hash="338578ad8c0898153f1f1b5f2a650f29"/></dir></dir></dir><dir name="Customer"><dir name="Form"><dir name="Login"><file name="Button.php" hash="6d90b2bec3cbf61e190d1e2e34ac76ea"/><file name="LoginWithPayPal.php" hash="d8cb8f2497c1b55623bb9eaa31b3009b"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="208dd2474f021daa12d9058fc9656644"/></dir><dir name="Model"><file name="AbstractRequest.php" hash="dbe0119887c2246c1ccaabed8cb1b3df"/><file name="AccessToken.php" hash="1437543bd5108403d3bd59acb2589be1"/><dir name="BackendNotifier"><file name="Feed.php" hash="b2be1437b16032678348b47cc9fdf851"/><file name="Observer.php" hash="855c1f0bb8c9bf123dd3e2e91eb0f78e"/></dir><file name="Grant.php" hash="efc2af70982828db13ca70786b92804d"/><file name="Login.php" hash="bc380f97d84b1a6c050cbc72710a5b20"/><dir name="System"><dir name="Config"><dir name="Source"><dir name="Button"><file name="Theme.php" hash="fa6dcb47274a0986e21926933b6fa6c1"/></dir></dir></dir></dir><file name="UserInfo.php" hash="7d6712bc97c0f0e68049930cc4624e01"/></dir><dir name="controllers"><file name="IndexController.php" hash="4927a173a6de37204ca04908e4716c1a"/></dir><dir name="etc"><file name="Webformat_LoginWithPayPal.xml" hash="0c076ab21d243bfd715ab0010a8a5116"/><file name="adminhtml.xml" hash="8205afb3ba1b3920b0ce414815f16412"/><file name="config.xml" hash="ec4ad8f137c4a6cc94bb6a72cd71506d"/><file name="system.xml" hash="fdef3118041d00acfaf4357c281b3649"/></dir></dir></dir></target><target name="magelocale"><dir><dir name="it_IT"><dir name="webformat"><file name="Webformat_LoginWithPayPal.csv" hash="a4cdadcbebad4cd13e7f69d4f6b42637"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="webformat"><file name="loginwithpaypal.xml" hash="270fa729d717ed6950eb4d0d8af5c473"/></dir></dir><dir name="template"><dir name="webformat"><dir name="loginwithpaypal"><dir name="customer"><dir name="form"><dir name="login"><file name="button.phtml" hash="015659c0f98d978d88e162b5c24dddf8"/><file name="loginwithpaypal.phtml" hash="9bbfd3a6d2dda49844824f1bb6740c2c"/></dir></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Webformat_LoginWithPayPal.xml" hash="237d579ed4022f3a1ce552f48e257cfe"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>5.6.0</max></php><extension><name>curl</name><min>7.0.0</min><max>8.0.0</max></extension></required></dependencies>
+</package>
